@@ -27,7 +27,7 @@ class logging:
 
         :function open
         """
-        self.log_path = ""
+        self.log_path = "/Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/"
         self.logfile = 'NotSet'
         if len(caller) < 15:
             spaces = '               '

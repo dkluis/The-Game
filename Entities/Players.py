@@ -60,7 +60,7 @@ class Player:
     
 
 def restore_all_players():
-    players_file = open('.thegame/players', 'r')
+    players_file = open('/Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/.thegame/players', 'r')
     restore_players = players_file.readlines()
     players = []
     for rest_player in restore_players:
@@ -75,7 +75,7 @@ def restore_all_players():
 
 
 def store_all_players(players):
-    players_file = open('.thegame/players', 'w')
+    players_file = open('/Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/.thegame/players', 'w')
     for player in players:
         info = player.return_all()
         store_players = str(info) + '\n'
