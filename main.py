@@ -2,36 +2,21 @@
 
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
 
-from Entities import Player
-from Entities import Race
+from Entities import Player, restore_all_players, store_all_players
 from Utils import logging
 
 
 def play_the_game():
-    print(f'Hi, The game is starting')
-    dick = Player()
-    dick.restore('Dick', 'Kluis', 'Dad', 3, 1001, '10000')
-    dick.return_all()
-    dick.update_score(-50)
-    dick.return_all()
-    dick.reset_score(100)
-    dick.return_all()
+    print(f'Welcome to the Players')
+    for player in players:
+        print(f'Hi, {player.get_nick_name()}, your current score is: {player.get_score()} '
+              f'and your entity is a {player.get_race()}')
     
-    robin = Player()
-    robin.initialize('Robin', 'Kluis', 'Robin')
-    robin.return_all()
-    robin.update_race(1000, 'Goblin')
-    robin.return_all()
     
-    race = Race()
-    race.restore(100)
-    race.return_all()
-    race.initialize("Elf")
-    race.return_all()
-
-
 if __name__ == '__main__':
     log = logging(caller='The Game', filename='TheGame')
     log.start()
+    players = restore_all_players()
     play_the_game()
+    store_all_players(players)
     log.end()

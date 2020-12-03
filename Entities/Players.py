@@ -31,7 +31,10 @@ class Player:
         self.__race = race
         self.__logfile = logging(caller=f'{self.__nick_name}', filename='TheGame')
         self.__logfile.write(f'Restored Player', 2)
-
+        
+    def get_nick_name(self):
+        return self.__nick_name
+    
     def get_score(self):
         return self.__score
     
@@ -42,7 +45,7 @@ class Player:
     def reset_score(self, value):
         self.__score = value
         self.__logfile.write(f'Reset score to: {self.__score}')
-        
+    
     def get_race(self):
         return self.__race
     
@@ -53,5 +56,28 @@ class Player:
         self.__logfile.write(f'Updated race to: {self.__race_name}')
     
     def return_all(self):
-        print(self.__id, self.__first_name, self.__last_name, self.__nick_name,
-              self.__race, self.__race_name, self.__score)
+        return self.__first_name, self.__last_name, self.__nick_name, self.__id, self.__score, self.__race
+    
+
+def restore_all_players():
+    players_file = open('.thegame/players', 'r')
+    restore_players = players_file.readlines()
+    players = []
+    for rest_player in restore_players:
+        play_temp = Player()
+        rest_player = ast.literal_eval(rest_player)
+        play_temp.restore(rest_player[0], rest_player[1], rest_player[2], rest_player[3], rest_player[4],
+                          rest_player[5])
+        players.append(play_temp)
+        del play_temp
+    players_file.close()
+    return players
+
+
+def store_all_players(players):
+    players_file = open('.thegame/players', 'w')
+    for player in players:
+        info = player.return_all()
+        store_players = str(info) + '\n'
+        players_file.write(store_players)
+    players_file.close()

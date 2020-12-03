@@ -1,2 +1,2 @@
-from Entities.Players import Player
+from Entities.Players import *
 from Entities.Races import Race
