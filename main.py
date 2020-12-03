@@ -9,7 +9,7 @@ from Entities import Race
 def play_the_game():
     print(f'Hi, The game is starting')
     dick = Player()
-    dick.restore('Dick', 'Kluis', 'DK', 3, 1001, '10000')
+    dick.restore('Dick', 'Kluis', 'Dad', 3, 1001, '10000')
     dick.return_all()
     dick.update_score(-50)
     dick.return_all()
@@ -17,9 +17,9 @@ def play_the_game():
     dick.return_all()
     
     robin = Player()
-    robin.initialize('Robin', 'Kluis', 'RK')
+    robin.initialize('Robin', 'Kluis', 'Robin')
     robin.return_all()
-    robin.update_race(10003)
+    robin.update_race(1000, 'Goblin')
     robin.return_all()
     
     race = Race()
