@@ -4,6 +4,7 @@
 
 from Entities import Player
 from Entities import Race
+from Utils import logging
 
 
 def play_the_game():
@@ -30,4 +31,7 @@ def play_the_game():
 
 
 if __name__ == '__main__':
+    log = logging(caller='The Game', filename='TheGame')
+    log.start()
     play_the_game()
+    log.end()
