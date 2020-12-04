@@ -1,0 +1,1 @@
+{'host_network': 'ca-server.local', 'host_local': 'localhost', 'db_admin': 'dick', 'db_password': 'Sandy3942', 'db_prod': 'TheGameDB', 'db_test': 'Test-TG-DB', 'user_admin': 'admin', 'user_password': 'password'}

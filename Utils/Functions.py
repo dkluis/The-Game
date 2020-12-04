@@ -20,14 +20,14 @@ def get_next_id(entity):
 class logging:
     def __init__(self, caller='Unknown', filename='Unknown'):
         """
-        :param env      Anything but 'Prod' (is default) will put the log file in the test environment mode
-                          All paths come from the key_values in the DB
+            Generic Logging function
+            
         :param caller   The program opening the log file
         :param filename The filename to use
 
         :function open
         """
-        self.log_path = "/Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/"
+        self.log_path = "/Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Logs/"
         self.logfile = 'NotSet'
         if len(caller) < 15:
             spaces = '               '
