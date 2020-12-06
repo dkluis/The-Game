@@ -33,6 +33,7 @@ def database_window():
                 add_menu_item(name='Classes', callback=classes)
                 add_menu_item(name='Abilities', callback=abilities)
                 add_menu_item(name='And More')
+                add_popup()
             with menu(name='Views'):
                 add_menu_item(name='Players##View')
             with menu(name='Developer'):
