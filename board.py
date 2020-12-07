@@ -1,73 +1,72 @@
+from Entities import *
+from Utils import logging
 from dearpygui.core import *
 from dearpygui.simple import *
 
-
-class Board:
-    def __init__(self, window_handle: str, drawing_handle: str, width: int, height: int):
-        self.window = window_handle
-        self.drawing = drawing_handle
-        self.width = width
-        self.height = height
-        self.background_color = [150, 0, 0, 150]
-        self.outline_color = [255, 255, 150, 150]
-        self.rows = 10
-        self.columns = 10
-
-        # recommend taking tile into it's own class maybe?
-        self.__tile_width = self.width / self.columns
-        self.__tile_height = self.height / self.rows
-        self.__tile_center_pos = [self.__tile_width/2, self.__tile_height/2]
-            
-    def update(self) -> None:
-        # updating drawing and background size
-        if does_item_exist(self.drawing):
-            delete_item(self.drawing)
-
-        self.width = get_item_width(self.window)
-        self.height = get_item_height(self.window)
-        
-        # set_drawing_size(self.drawing, self.width, self.height)
-        add_drawing(self.drawing, width=self.width, height=self.height, parent='Main')
-        # Could not get the modify to work so, delete the drawing and also took out render and only call update now.
-        # modify_draw_command(self.drawing, pmin=[0, 0], pmax=[self.width, self.height])
-        
-        # No code duplication anymore
-        # code duplication below, def recommend to put into tile class so we can just call tile.render() and tile.update
-        # here and above
-        self.__tile_width = self.width / self.columns
-        self.__tile_height = self.height / self.rows
-        self.__tile_center_pos = [self.__tile_width / 2, self.__tile_height / 2]
-        
-        for row in range(0, self.rows):
-            for column in range(0, self.columns):
-                p_min = [self.__tile_center_pos[0] - self.__tile_width/2, self.__tile_center_pos[1] + self.__tile_height/2]
-                p_max = [self.__tile_center_pos[0] + self.__tile_width/2, self.__tile_center_pos[1] - self.__tile_height/2]
-                draw_rectangle(self.drawing, p_min, p_max, self.outline_color)
-                self.__tile_center_pos[0] = self.__tile_center_pos[0] + self.__tile_width
-            self.__tile_center_pos = [self.__tile_width/2, self.__tile_center_pos[1] + self.__tile_height]
-            
-# GUI window layouts
+log = logging(caller='board.py', filename='board')
 
 
-with window("Main", width=500, height=500):
-    board = Board("Main", "game board", 500, 500)
-    board.update()
+def do_hexagon_draw(sender, data):
+    board_array = []
+    hex_size = 30
+    hexagon_info = Hexagon('info', 'Main', 'Board', log, size=hex_size)
+    top_bot_dist = hexagon_info.top_bot_dist
+    left_right_dist = (hex_size + hex_size / 2) / 2
+    row_height = int(1000/top_bot_dist)
+    row_len = int(1000/(left_right_dist * 2))
+    col_len = int(1000/top_bot_dist)
 
+    for idx in range(0, row_height):
+        vo = top_bot_dist * idx
+        ho = left_right_dist * 0
+        board_array.append(Hexagon(f'A{idx}', 'Main', 'Board', log, size=hex_size,
+                                   ver_offset=vo, hor_offset=ho, thickness=1))
+        board_array[idx].draw()
+    print(len(board_array))
 
-# fixing style boarders and stuff to be 0
-set_item_style_var("Main", mvGuiStyleVar_WindowPadding, [0, 0])
-set_item_style_var("Main", mvGuiStyleVar_ItemSpacing, [0, 0])
-set_item_style_var("Main", mvGuiStyleVar_ItemInnerSpacing, [0, 0])
-set_item_style_var("Main", mvGuiStyleVar_WindowBorderSize, [0])
+    for idx in range(0, row_height):
+        vo = top_bot_dist * idx
+        ho = left_right_dist * 2
+        board_array.append(Hexagon(f'B{idx}', 'Main', 'Board', log, size=hex_size,
+                                   ver_offset=vo + top_bot_dist / 2, hor_offset=ho, thickness=1))
+        board_array[idx + row_height].draw()
+    print(len(board_array))
 
+    for idx in range(0, row_height):
+        vo = top_bot_dist * idx
+        ho = left_right_dist * 4
+        board_array.append(Hexagon(f'C{idx}', 'Main', 'Board', log, size=hex_size,
+                                   ver_offset=vo, hor_offset=ho, thickness=1))
+        board_array[idx + row_height * 2].draw()
+    print(len(board_array))
 
-def resize_callback(sender, data):
-    board.update()
+    for idx in range(0, row_height):
+        vo = top_bot_dist * idx
+        ho = left_right_dist * 6
+        board_array.append(Hexagon(f'D{idx}', 'Main', 'Board', log, size=hex_size,
+                                   ver_offset=vo + top_bot_dist / 2, hor_offset=ho, thickness=1))
+        board_array[idx + row_height * 3].draw()
+    print(len(board_array))
+    
+    for idx in range(0, row_height):
+        vo = top_bot_dist * idx
+        ho = left_right_dist * 8
+        board_array.append(Hexagon(f'E{idx}', 'Main', 'Board', log, size=hex_size,
+                                   ver_offset=vo, hor_offset=ho, thickness=1))
+        board_array[idx + row_height * 4].draw()
+    print(len(board_array))
+    
+    print(f'row len {row_len}, column len {col_len}')
     
 
-set_resize_callback(handler="Main", callback=resize_callback)
+with window('Main', width=1000, height=1000, horizontal_scrollbar=True, x_pos=0, y_pos=0,
+            label='The Board'):
+    log_info(f'Main')
+    do_hexagon_draw('', 'Main')
 
-# Not sure what this does and what it's purpose is????
-enable_docking(dock_space=True)
+set_main_window_title('The Game')
+set_main_window_size(1500, 1500)
+# show_logger()
+# set_log_level(mvINFO)
 
 start_dearpygui()

@@ -1,6 +1,6 @@
 from dearpygui.core import *
 from dearpygui.simple import *
-from math import cos, sin, sqrt
+from math import sqrt
 
 # Init the program
 add_value('size', 100)
