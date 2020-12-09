@@ -61,7 +61,7 @@ def do_hexagon_draw(sender, data):
     print(f'row len {row_len}, column len {col_len}')
 
 
-def do_board_draw_example():
+def do_board_draw_example(sender, data):
     board = Board(log)
     hex_size = 30
     
@@ -74,24 +74,25 @@ def do_board_draw_example():
     log.write(f'Vertical offset {vertical_offset}, Horizontal offset {horizontal_offset}')
     del hexagon_info
     
-    hexagon_1 = Hexagon('00#00', '', '', log, size=hex_size, thickness=1)
-    hexagon_2 = Hexagon('01#12', '', '', log, size=hex_size, thickness=2, hor_offset=300, ver_offset=300)
+    clear_drawing('Example')
+    hexagon_1 = Hexagon('00#00', 'Main', 'Example', log, size=hex_size, thickness=1,
+                        hor_offset=get_value('h1_h'), ver_offset=get_value('h1_v'))
+    hexagon_2 = Hexagon('01#12', 'Main', 'Example', log, size=hex_size, thickness=2, hor_offset=300, ver_offset=300)
     board.add('info', hexagon_1)
     board.add('info2', hexagon_2)
     result = board.items()
     for hexagon in result:
         hexagon.draw()
         
-    hexagon_1.fill()
-    hexagon_2.draw_cirle([100, 255, 100, 100])
-    hexagon_1.draw_cirle()
+    hexagon_1.fill(get_value('c_f'))
+    hexagon_2.draw_cirle(get_value('c_c'))
+    hexagon_1.draw_cirle(get_value('c_c'))
     hexagon_1.report()
     hexagon_2.report()
 
 
 def do_board_draw():
     board = Board(log)
-
     hex_size = 30
     hexagon_info = Hexagon('info', '', '', log, size=hex_size, thickness=1)
     top_bot_dist = hexagon_info.top_bot_dist
@@ -113,14 +114,26 @@ def do_board_draw():
             board.get(k).draw()
             board.get(k).report()
             print(row, col, k, vo, ho)
-    
-
+            
+            
 with window('Main', width=1000, height=1000, horizontal_scrollbar=True, x_pos=0, y_pos=0,
             label='The Board'):
     log_info(f'Main')
     
+
+with window('Draw Example', label='Draw Example', x_pos=1010, y_pos=500, autosize=True):
+    add_color_picker4('c_c', source='c_c', no_inputs=True, label='Circle Both', callback=do_board_draw_example)
+    add_color_picker4('c_f', source='c_f', no_inputs=True, default_value=[255, 255, 255, 255], label='Fill Hex 1',
+                      callback=do_board_draw_example)
+    add_slider_int('h1', default_value=100, max_value=1000, min_value=30, source='h1_h', label='Horizontal Hex 1',
+                   callback=do_board_draw_example)
+    add_slider_int('v1', default_value=100, max_value=1000, min_value=0, source='h1_v', label='Vertical Hex 1',
+                   callback=do_board_draw_example)
+    add_button('Draw Them', callback=do_board_draw_example)
+    
+    
     #do_hexagon_draw('', 'Main')
-    do_board_draw()
+    #do_board_draw()
     #do_board_draw_example()
     
     
