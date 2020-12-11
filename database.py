@@ -29,10 +29,10 @@ def database_window():
                 add_menu_item(name='Quit', shortcut='ctl Q', callback=stop_ui)
             with menu(name='Tables'):
                 add_menu_item(name='Players', callback=players)
-                add_menu_item(name='Races', callback=races)
-                add_menu_item(name='Classes', callback=classes)
-                add_menu_item(name='Abilities', callback=abilities)
-                add_menu_item(name='And More')
+                add_menu_item(name='Nick Names', callback=nick_names)
+                add_menu_item(name="Table Id's", callback=table_ids)
+                add_menu_item(name='Games', callback=games)
+                add_menu_item(name='...')
             with menu(name='Views'):
                 add_menu_item(name='Players##View')
             with menu(name='Developer'):
@@ -56,41 +56,44 @@ def dpg(sender, data):
 
 def players(sender, data):
     log_info(f'players: Sender {sender}, Data {data}')
+    if not does_item_exist('crudPlayers'):
+        player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
+                                  x_poss=50, y_pos=50, width=1200, height=500,
+                                  table='players', fields=['Id', 'Nick Name'], db=game_db)
+        player_crud.refresh_table(sender, data)
+        
     
-    game_db = sqliteDB(batch=True)
-    '''
-    sql = f'select player_id, nick_name from players'
-    result = game_db.execute_sql(sql=sql, sql_type='Fetch', data_dict=True)
-    print(result)
-    result = game_db.execute_sql(sql=sql, sql_type='Fetch', data_dict=True, field_list=['Field 1', 'Field2'])
-    print(result)
-    result = game_db.execute_sql(sql=sql, sql_type='Fetch')
-    print(result)
-    '''
-    
-    player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
-                              x_poss=100, y_pos=100, width=1200, height=500,
-                              table='players', fields=['Id', 'Nick Name'], db=game_db)
-    
-    
-def races(sender, data):
-    log_info(f'races: Sender {sender}, Data {data}')
+def nick_names(sender, data):
+    log_info(f'nick names: Sender {sender}, Data {data}')
+    if not does_item_exist('crudNickNames'):
+        nick_names_crud = Crud_Window(name='crudNickNames', label='Maintain Nick Names', logfile=logfile,
+                                      x_poss=100, y_pos=100, width=1200, height=500,
+                                      table='nick_names', fields=['Nick Name', 'Id'], db=game_db)
+        nick_names_crud.refresh_table(sender, data)
     
     
-def classes(sender, data):
-    log_info(f'classes: Sender {sender}, Data {data}')
+def table_ids(sender, data):
+    log_info(f'table_ids: Sender {sender}, Data {data}')
+    if not does_item_exist('crudTableIds'):
+        table_ids_crud = Crud_Window(name='crudTableIds', label="Maintain Table Id's", logfile=logfile,
+                                     x_poss=150, y_pos=150, width=1200, height=500,
+                                     table='table_ids', fields=['Table Name', 'Last Id'], db=game_db)
+        table_ids_crud.refresh_table(sender, data)
     
     
-def abilities(sender, data):
+def games(sender, data):
     log_info(f'abilities: Sender {sender}, Data {data}')
-
+    if not does_item_exist('crudGames'):
+        games_crud = Crud_Window(name='crudGames', label='Maintain Games', logfile=logfile,
+                                 x_poss=250, y_pos=250, width=1200, height=500,
+                                 table='games', fields=['Game Id', 'Name'], db=game_db)
+        games_crud.refresh_table(sender, data)
+        
 
 if __name__ == '__main__':
     logfile = logging(caller='Database', filename='TheGame')
     logfile.start()
     logfile.write(f'Opening the Database Maintenance window')
-    
-    #game_db = sqliteDB()
-    players('', '')
+    game_db = sqliteDB()
     
     start_ui()

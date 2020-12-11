@@ -20,16 +20,15 @@ class Window:
         self.y_pos = y_pos
         self.width = width
         self.height = height
-        self.__create_window()
+        self.__create_window__()
         
-    def __create_window(self):
-        if not does_item_exist(self.name):
-            add_window(self.name,
-                       width=self.width, height=self.height,
-                       x_pos=self.x_pos, y_pos=self.y_pos,
-                       label=self.label)
-            end()
-            set_main_window_title('The Game')
+    def __create_window__(self):
+        add_window(self.name,
+                   width=self.width, height=self.height,
+                   x_pos=self.x_pos, y_pos=self.y_pos,
+                   label=self.label)
+        end()
+        set_main_window_title('The Game')
 
 
 class Crud_Window(Window):
@@ -43,20 +42,28 @@ class Crud_Window(Window):
                          x_poss=x_poss, y_pos=y_pos,
                          width=width, height=height,
                          logfile=logfile)
-
+        
         self.table = table
         self.fields = fields
         self.__maintain_records__()
-        self.__create_table__()
         self.db = db
         
     def __maintain_records__(self):
         add_button(name=f'Create Player##{self.name}', parent=self.name)
         add_same_line(parent=self.name)
-        add_button(name=f'Update Player##{self.name}', parent=self.name)
+        add_button(name=f'Update Player##{self.name}', parent=self.name, enabled=False)
         add_same_line(parent=self.name)
-        add_button(name=f'Delete Player##{self.name}', parent=self.name)
+        add_button(name=f'Delete Player##{self.name}', parent=self.name, enabled=False)
         add_separator(name=f'##{self.name}sep1', parent=self.name)
+        self.__create_table__()
+
+        
+    def __toggle_button_enabled__(self, button):
+        config = get_item_configuration(button)
+        if config['enabled']:
+            configure_item(button, enabled=False)
+        else:
+            configure_item(button, enabled=True)
         
     def __create_table__(self):
         add_button(name=f'refresh##{self.name}{self.table}', callback=self.refresh_table, parent=self.name)
