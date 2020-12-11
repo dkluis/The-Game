@@ -1,21 +1,23 @@
 from math import sqrt
 from dearpygui.core import does_item_exist, draw_polygon, add_drawing, \
-    draw_text, draw_circle, add_value, set_value, get_value
+    draw_text, draw_circle
 
 from Utils import logging
+from Entities import Player
 
 
 class Hexagon:
     def __init__(self,
-                 id_handle=int,
-                 window_handle=str,
-                 drawing_handle=str,
+                 id_handle,
+                 window_handle,
+                 drawing_handle,
                  logfile=logging,
                  size=20,
                  thickness=1,
                  hor_offset=0.0,
                  ver_offset=0.0,
-                 outline_color=[255, 0, 0, 255]):
+                 outline_color=[255, 0, 0, 255]
+                 ):
         self.id = id_handle
         self.window = window_handle
         self.drawing = drawing_handle
@@ -35,6 +37,8 @@ class Hexagon:
         self.left_right_dist = 0.0
         self.filled = False
         self.circled = False
+        self.occupied = None
+        self.occupant = Player
         self.__calc_parameters()
         self.logfile = logfile
     
@@ -73,7 +77,7 @@ class Hexagon:
         self.filled = True
         self.logfile.write(f'Filling Hexagon {self.id} with tag {self.id} and color {fillcolor}')
         
-    def draw_cirle(self, circle_color=[]):
+    def draw_circle(self, circle_color=[]):
         if len(circle_color) == 0:
             circle_color = self.outline_color
         draw_circle(self.drawing, self.center, radius=5.0, color=circle_color, tag=f'C{self.id}')
@@ -84,7 +88,24 @@ class Hexagon:
         self.logfile.write(f'Reporting all coordinate on {self.id} starting with center: {self.center}, '
                            f'{self.coordinate_a}, {self.coordinate_b}, {self.coordinate_c}, '
                            f'{self.coordinate_d}, {self.coordinate_e}, {self.coordinate_f}, '
-                           f'Circled: {self.circled} and Filled {self.filled}')
+                           f'Circled: {self.circled} and Filled {self.filled}, '
+                           f'Occupant: {self.occupant()}')
+        
+    def occupy(self, occupant):
+        if self.occupied:
+            return False, self.occupant
+        else:
+            self.occupant = occupant
+            self.occupied = True
+        return True, self.occupant
+
+    def vacate(self):
+        if not self.occupied:
+            return False
+        else:
+            self.occupied = False
+            self.occupant = Player
+            return True
 
 
 class Board:
@@ -93,9 +114,11 @@ class Board:
         self.logfile = log
         self.logfile.write('Created Board Dictionary')
     
-    def add(self, k, v):
+    def add(self, k=str, v=Hexagon):
         kv = {f"{k}": v}
         self.dict.update(kv)
+        split_k = k.split('##')
+        # ToDo keep track of the max row and the max column values
         self.logfile.write(f'Added {kv} and dict is now {len(self.dict)} long')
         
     def get(self, k):
@@ -103,10 +126,26 @@ class Board:
         self.logfile.write(f'Getting {k} and found {entry}')
         return entry
     
+    def get_row(self, r):
+        result = []
+        s = str(r) + "##"
+        for k, v in self.dict:
+            if s in v.id:
+                result.append({f"{k}": v})
+        return result
+    
+    def get_column(self, c):
+        result = []
+        s = '##' + str(c)
+        for k, v in self.dict:
+            if s in v.id:
+                result.append({f"{k}": v})
+        return result
+    
     def items(self):
         result = []
         for k, v in self.dict.items():
             result.append(v)
         self.logfile.write(f'Returning all items of the Board Dictionary: {len(result)}')
         return result
-
+    

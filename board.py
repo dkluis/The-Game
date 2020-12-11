@@ -8,7 +8,7 @@ log = logging(caller='board.py', filename='TheGame')
 
 def do_hexagon_draw(sender, data):
     board_array = []
-    hex_size = 30
+    hex_size =50
     hexagon_info = Hexagon('info', 'Main', 'Board', log, size=hex_size)
     top_bot_dist = hexagon_info.top_bot_dist
     left_right_dist = (hex_size + hex_size / 2) / 2
@@ -63,7 +63,7 @@ def do_hexagon_draw(sender, data):
 
 def do_board_draw_example(sender, data):
     board = Board(log)
-    hex_size = 30
+    hex_size = 50
     
     hexagon_info = Hexagon('info', '', '', log, size=hex_size, thickness=1)
     top_bot_dist = hexagon_info.top_bot_dist
@@ -85,15 +85,22 @@ def do_board_draw_example(sender, data):
         hexagon.draw()
         
     hexagon_1.fill(get_value('c_f'))
-    hexagon_2.draw_cirle(get_value('c_c'))
-    hexagon_1.draw_cirle(get_value('c_c'))
-    hexagon_1.report()
-    hexagon_2.report()
+    hexagon_2.draw_circle(get_value('c_c'))
+    hexagon_1.draw_circle(get_value('c_c'))
 
 
-def do_board_draw():
+def clear_board_draw(sender, data):
+    clear_drawing('Example')
+    if does_item_exist('Example'):
+        delete_item('Example')
+    clear_drawing('Board')
+    if does_item_exist('Board'):
+        delete_item('Board')
+
+
+def do_board_draw(sender, data):
     board = Board(log)
-    hex_size = 30
+    hex_size = 60
     hexagon_info = Hexagon('info', '', '', log, size=hex_size, thickness=1)
     top_bot_dist = hexagon_info.top_bot_dist
     left_right_dist = (hex_size + hex_size / 2) / 2
@@ -121,7 +128,7 @@ with window('Main', width=1000, height=1000, horizontal_scrollbar=True, x_pos=0,
     log_info(f'Main')
     
 
-with window('Draw Example', label='Draw Example', x_pos=1010, y_pos=500, autosize=True):
+with window('Draw Example', label='Draw Example', x_pos=1010, y_pos=100, autosize=True):
     add_color_picker4('c_c', source='c_c', no_inputs=True, label='Circle Both', callback=do_board_draw_example)
     add_color_picker4('c_f', source='c_f', no_inputs=True, default_value=[255, 255, 255, 255], label='Fill Hex 1',
                       callback=do_board_draw_example)
@@ -130,11 +137,21 @@ with window('Draw Example', label='Draw Example', x_pos=1010, y_pos=500, autosiz
     add_slider_int('v1', default_value=100, max_value=1000, min_value=0, source='h1_v', label='Vertical Hex 1',
                    callback=do_board_draw_example)
     add_button('Draw Them', callback=do_board_draw_example)
+    add_button('Clear Them', callback=clear_board_draw)
+    
+
+with window('Draw Hexagon', label='Draw Hexagon', x_pos=1010, y_pos=650, autosize=True):
+    add_button('Draw Board', callback=do_hexagon_draw)
+    add_button('Clear Board', callback=clear_board_draw)
+
+with window('Draw Class Tryout', label='Draw Class Tryout', x_pos=1010, y_pos=750, autosize=True):
+    add_button('Draw Class Try', callback=do_board_draw)
+    add_button('Clear Class Try', callback=clear_board_draw)
     
     
     #do_hexagon_draw('', 'Main')
-    #do_board_draw()
-    #do_board_draw_example()
+    #do_board_draw('', 'Main')
+    #do_board_draw_example('', 'Main')
     
     
     

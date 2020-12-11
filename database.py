@@ -1,5 +1,5 @@
-from Utils import logging
-from Utils import mariaDB
+from Utils import sqliteDB
+from GameUI import *
 
 from dearpygui.core import *
 from dearpygui.simple import *
@@ -33,7 +33,6 @@ def database_window():
                 add_menu_item(name='Classes', callback=classes)
                 add_menu_item(name='Abilities', callback=abilities)
                 add_menu_item(name='And More')
-                add_popup()
             with menu(name='Views'):
                 add_menu_item(name='Players##View')
             with menu(name='Developer'):
@@ -58,6 +57,21 @@ def dpg(sender, data):
 def players(sender, data):
     log_info(f'players: Sender {sender}, Data {data}')
     
+    game_db = sqliteDB(batch=True)
+    '''
+    sql = f'select player_id, nick_name from players'
+    result = game_db.execute_sql(sql=sql, sql_type='Fetch', data_dict=True)
+    print(result)
+    result = game_db.execute_sql(sql=sql, sql_type='Fetch', data_dict=True, field_list=['Field 1', 'Field2'])
+    print(result)
+    result = game_db.execute_sql(sql=sql, sql_type='Fetch')
+    print(result)
+    '''
+    
+    player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
+                              x_poss=100, y_pos=100, width=1200, height=500,
+                              table='players', fields=['Id', 'Nick Name'], db=game_db)
+    
     
 def races(sender, data):
     log_info(f'races: Sender {sender}, Data {data}')
@@ -75,4 +89,8 @@ if __name__ == '__main__':
     logfile = logging(caller='Database', filename='TheGame')
     logfile.start()
     logfile.write(f'Opening the Database Maintenance window')
+    
+    #game_db = sqliteDB()
+    players('', '')
+    
     start_ui()

@@ -1,2 +1,2 @@
 from Utils.Functions import *
-from Utils.DataBase import mariaDB
+from Utils.DataBase import sqliteDB

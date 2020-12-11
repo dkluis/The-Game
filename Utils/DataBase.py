@@ -1,5 +1,4 @@
-import mariadb
-import sys
+import sqlite3
 import os
 import ast
 
@@ -12,7 +11,7 @@ class config:
             Config is the routine to read 'secrets' from the configuration file so that they are never visible
             or hard-coded in the source files
         """
-        self.__log = logging(caller='Lib config', filename='The Game')
+        self.__log = logging(caller='Lib config', filename='TheGame')
         secret = ''
         try:
             secret = open('/Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/.thegame/config', 'r')
@@ -56,110 +55,122 @@ class config:
             self.db = self.db_test
         else:
             self.db = self.db_prod
-
-
-class mariaDB:
-    def __init__(self, h='', d='', batch=False):
-        """
-            mariaDB handles the DB activities for the mariadb DB of TVM-Management
-
-        :param h:       manually assign a host
-        :param d:       manually assign Production or Testing DB
-        :param batch:   Default False, which mean a commit after all executes of sql with require a commit
-                        True, mean that commits are postpone until a commit is trigger or when the DB is closed
-        """
-        self.__log = logging(caller='Lib mariaDB', filename='The Game')
-        conf = config()
-        if h != '':
-            self.__host = h
-        else:
-            self.__host = conf.host
-        self.__user = conf.db_admin
-        self.__password = conf.db_password
-        self.__user_admin = conf.user_admin
-        self.__user_password = conf.user_password
-        if d != '':
-            self.__db = d
-        else:
-            self.__db = conf.db
-        self.__batch = batch
-        
-        self.__connection = ''
-        self.__cursor = ''
-        self.__active = False
-        self.open()
-        
-        self.fields = []
-        self.data_dict = []
     
-    def open(self):
-        if self.__active:
-            return
-        try:
-            self.__connection = mariadb.connect(
-                host=self.__host,
-                user=self.__user,
-                password=self.__password,
-                database=self.__db)
-        except mariadb.Error as err:
-            if err:
-                self.__log.write(f"Connect {self.__db}: Error connecting to MariaDB Platform: {err}", 0)
-                self.__log.write('--------------------------------------------------------------------------')
-                sys.exit(1)
+    
+class sqliteDB:
+    def __init__(self, batch=False):
+        """
+            sqliteDB handles the DB activities for a sqlite3 Database
+
+        :param batch:   Default False, which mean a commit after all executes of sql which normally require a commit
+                        True, mean that commits are postpone until a commit is manually called or when the DB is closed
+        """
+        self.batch = batch
+        self.__log = logging(caller='sqliteDB', filename='TheGame')
+        self.__active = False
+        self.__fields = []
+
+        self.__db_loc = os.getcwd() + '/Data/TheGame.db'
+        self.__connection = sqlite3.connect(self.__db_loc)
         self.__cursor = self.__connection.cursor()
-        self.__active = True
+        self.__log.write(f'sqliteDB: Initialized the DB {self.__db_loc}')
+        
+    def open(self):
+        """
+            Opens a Connection and Cursor
+            
+        :return: None
+        """
+        if not self.__active:
+            self.__connection = sqlite3.connect(self.__db_loc)
+            self.__cursor = self.__connection.cursor()
+            self.__active = True
+            self.__log.write(f'sqliteDB: Opened the DB connection')
+        else:
+            self.__log.write(f'sqliteDB: Tried to open a DB connection while already open')
     
     def close(self):
+        """
+            Closes the connection 
+        
+        :return: None
+        """
         if self.__active:
-            if self.__batch:
+            if self.batch:
                 self.commit()
             self.__connection.close()
             self.__active = False
+            self.__log.write(f'sqliteDB: Closed the DB connection')
+        else:
+            self.__log.write(f'sqliteDB: Tried to close the DB connection while already closed')
     
     def commit(self):
         """
-            Execute a commit for outstanding transactions
+            Commits outstanding transactions
+            
+        :return: None
         """
         if self.__active:
             self.__connection.commit()
+            self.__log.write(f'Committed outstanding transactions')
+        else:
+            self.__log.write(f'Commit requested but no DB connection is active')
+        return
     
-    def execute_sql(self, sql='', sqltype='Fetch', data_dict=False, dd_id=False, field_list=[]):
+    def rollback(self):
+        """
+            Rolls back outstanding transactions
+            
+        :return: 
+        """
+        if self.__active:
+            self.__log.write(f'Rollback outstanding transactions')
+            self.__connection.rollback()
+        else:
+            self.__log.write(f'Rollback requested but no DB connection is active')
+            
+    def execute_sql(self, sql='', sql_type='Fetch', data_dict=False, row_id=False, field_list=[]):
         """
                 Execute SQL
+                
         :param sql:         The SQL to execute
-        :param sqltype:     Default if 'Fetch' other option is 'Commit'
+        :param sql_type:    Default if 'Fetch' other option is 'Commit'
         :param data_dict:   Default False, True create a dictionary out of the result of a fetch
-        :param field_list:  The list of fields to be returned in the dict.  The lib will try to figure out the
-                                field array itself but for joins you need the list to be passed in.
-        :param dd_id        Default False, True adds and id number for every row of data returned in the data_dict
+        :param field_list:  The list of fields to be returned in the dict.  
+                            Is optional since the lib will try to figure out the
+                                field array itself but for joins and select * (for now) 
+                                you need the list to be passed in.
+        :param row_id        Default False, True adds and id number for every row of data returned in the data_dict
         :return:            True, False or the result or data_dict set from a fetch
         """
         if not self.__active:
             self.open()
-        if sqltype == 'Commit':
+        if sql_type == 'Commit':
             try:
                 self.__cursor.execute(sql)
-                if not self.__batch:
+                if not self.batch:
                     self.__connection.commit()
-            except mariadb.Error as er:
-                self.__log.write(f'Execute SQL (Commit) Database Error: {self.db}, {er}, {sql}', 0)
+            except sqlite3.Error as er:
+                self.__log.write(f'Execute SQL (Commit) Database Error: {self.__db_loc}, {er}, {sql}', 0)
                 self.__log.write('----------------------------------------------------------------------')
                 return False, er
             return True
-        elif sqltype == "Fetch":
+        elif sql_type == "Fetch":
             try:
                 self.__cursor.execute(sql)
                 result = self.__cursor.fetchall()
-            except mariadb.Error as er:
-                self.__log.write(f'Execute SQL (Fetch) Database Error: {self.db}, {er}, {sql}', 0)
+            except sqlite3.Error as er:
+                self.__log.write(f'Execute SQL (Fetch) Database Error: {self.__db_loc}, {er}, {sql}', 0)
                 self.__log.write(f'----------------------------------------------------------------------')
                 return False, er
+            self.__log.write(f'sqliteDB: SQL execution of {sql_type}: {sql} with {len(result)} records returned')
             if data_dict and len(result) > 0:
                 if field_list:
-                    self.fields = field_list
+                    self.__fields = field_list
                 else:
                     self.__extract_fields(sql)
-                self.__data_as_dict(result, dd_id)
+                self.__log.write(f'Transforming the result into a dictionary result length: {len(result)}')
+                self.__data_as_dict(result, row_id)
                 return self.data_dict
             else:
                 return result
@@ -169,12 +180,16 @@ class mariaDB:
     def __extract_fields(self, sql):
         """
             Extract the fields from the sql
+            Note: Current does not support the select * option
+            
         :param sql:     The sql
         :return:        List of Fields (also self.fields)
         """
         sr = sql.lower().replace('select ', '').replace("`", "")
         sp = sr.lower().split(' from')[0]
+        # st = ''
         if sp == '*':
+            '''
             sf = sql.lower().split('from ')
             if len(sf) == 2:
                 st = str(sf[1]).lower()
@@ -185,21 +200,24 @@ class mariaDB:
             for column in columns:
                 self.fields.append(column[0])
             return self.fields
+            '''
+            return []
         else:
             fields = sp.split(", ")
             for field in fields:
-                self.fields.append(field)
-            return self.fields
+                self.__fields.append(field)
+            return self.__fields
     
     def __data_as_dict(self, result, idx_id=False):
         """
             Returns the data as a dictionary (with or without and index in front of every row
+            
         :param  result:     The Data to be processed
         :param  idx_id:     Default False, otherwise it adds and numbered ID to the dict
         :return:
         """
-        if len(self.fields) != len(result[0]):
-            self.__log.write(f'The length {len(self.fields)} of the data array does not match '
+        if len(self.__fields) != len(result[0]):
+            self.__log.write(f'The length {len(self.__fields)} of the data array does not match '
                              f'the length {len(result)} of the field array', 0)
             self.data_dict = []
             return
@@ -212,26 +230,9 @@ class mariaDB:
             else:
                 row = "{"
             f_idx = 0
-            for field in self.fields:
+            for field in self.__fields:
                 row += f'''"{field}": "{str(rec[f_idx]).replace('"', '~~')}", '''
                 f_idx += 1
             response = response + row[:-2] + "},"
         response = "[" + response[:-1] + "]"
         self.data_dict = ast.literal_eval(response)
-        return
-
-
-class tables:
-    def __init__(self):
-        self.create_players = "CREATE TABLE Players " \
-                              "(nick_name varchar(30) NOT NULL, " \
-                              "password varchar(30) NOT NULL, " \
-                              "CONSTRAINT Players_UN UNIQUE KEY (nick_name), " \
-                              "CONSTRAINT Players_PK PRIMARY KEY (nick_name)) " \
-                              "ENGINE=InnoDB " \
-                              "DEFAULT CHARSET=utf16 COLLATE=utf16_general_ci;"
-        self.drop_players = "DROP TABLE Players;"
-        self.init_players = "INSERT INTO TheGameDB.Players (nick_name,password) " \
-                            "VALUES " \
-                            "('Admin','admin'), " \
-                            "('Dick','admin');"
