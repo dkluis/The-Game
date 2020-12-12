@@ -1,4 +1,3 @@
-from Utils import sqliteDB
 from GameUI import *
 
 from dearpygui.core import *
@@ -19,6 +18,7 @@ def stop_ui(sender, data):
 
 
 def stop_ui_exit(sender, data):
+    game_db.close()
     logfile.end()
     
 
@@ -59,8 +59,10 @@ def players(sender, data):
     if not does_item_exist('crudPlayers'):
         player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
                                   x_poss=50, y_pos=50, width=1200, height=500,
-                                  table='players', fields=['Id', 'Nick Name'], db=game_db)
-        player_crud.refresh_table(sender, data)
+                                  table='players',
+                                  fields=[('Id', 'int'), ('Nick Name', 'str'), ('New Field', 'str')],
+                                  db=game_db)
+        player_crud.refresh_table()
         
     
 def nick_names(sender, data):
@@ -68,8 +70,8 @@ def nick_names(sender, data):
     if not does_item_exist('crudNickNames'):
         nick_names_crud = Crud_Window(name='crudNickNames', label='Maintain Nick Names', logfile=logfile,
                                       x_poss=100, y_pos=100, width=1200, height=500,
-                                      table='nick_names', fields=['Nick Name', 'Id'], db=game_db)
-        nick_names_crud.refresh_table(sender, data)
+                                      table='nick_names', fields=[('Nick Name', 'str'), ('Id', 'int')], db=game_db)
+        nick_names_crud.refresh_table()
     
     
 def table_ids(sender, data):
@@ -77,17 +79,17 @@ def table_ids(sender, data):
     if not does_item_exist('crudTableIds'):
         table_ids_crud = Crud_Window(name='crudTableIds', label="Maintain Table Id's", logfile=logfile,
                                      x_poss=150, y_pos=150, width=1200, height=500,
-                                     table='table_ids', fields=['Table Name', 'Last Id'], db=game_db)
-        table_ids_crud.refresh_table(sender, data)
-    
+                                     table='table_ids', fields=[('Table Name', 'str'), ('Last Id', 'int')], db=game_db)
+        table_ids_crud.refresh_table()
+
     
 def games(sender, data):
     log_info(f'abilities: Sender {sender}, Data {data}')
     if not does_item_exist('crudGames'):
         games_crud = Crud_Window(name='crudGames', label='Maintain Games', logfile=logfile,
                                  x_poss=250, y_pos=250, width=1200, height=500,
-                                 table='games', fields=['Game Id', 'Name'], db=game_db)
-        games_crud.refresh_table(sender, data)
+                                 table='games', fields=[('Game Id', 'int'), ('Name', 'str')], db=game_db)
+        games_crud.refresh_table()
         
 
 if __name__ == '__main__':
@@ -95,5 +97,9 @@ if __name__ == '__main__':
     logfile.start()
     logfile.write(f'Opening the Database Maintenance window')
     game_db = sqliteDB()
+    
+    print(game_db.execute_sql('select * from players', data_dict=True))
+    print(game_db.get_table_info('nick_names'))
+    quit()
     
     start_ui()

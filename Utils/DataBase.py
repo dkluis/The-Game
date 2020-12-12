@@ -168,7 +168,7 @@ class sqliteDB:
                 if field_list:
                     self.__fields = field_list
                 else:
-                    self.__extract_fields(sql)
+                    self.__extract_fields__(sql)
                 self.__log.write(f'Transforming the result into a dictionary result length: {len(result)}')
                 self.__data_as_dict(result, row_id)
                 return self.data_dict
@@ -177,7 +177,7 @@ class sqliteDB:
         else:
             return False, 'Not implemented yet'
     
-    def __extract_fields(self, sql):
+    def __extract_fields__(self, sql):
         """
             Extract the fields from the sql
             Note: Current does not support the select * option
@@ -187,26 +187,18 @@ class sqliteDB:
         """
         sr = sql.lower().replace('select ', '').replace("`", "")
         sp = sr.lower().split(' from')[0]
-        # st = ''
+        fields = []
         if sp == '*':
-            '''
-            sf = sql.lower().split('from ')
-            if len(sf) == 2:
-                st = str(sf[1]).lower()
-            fields_sql = f"SHOW COLUMNS FROM {st}"
-            self.__cursor.execute(fields_sql)
-            columns = self.__cursor.fetchall()
-            self.fields = []
+            sf = sql.lower().split('from ')[1]
+            st = sf.lower().split(' where ')[0]
+            columns = self.get_table_info(st)
             for column in columns:
-                self.fields.append(column[0])
-            return self.fields
-            '''
-            return []
+                fields.append(column['name'])
         else:
             fields = sp.split(", ")
             for field in fields:
-                self.__fields.append(field)
-            return self.__fields
+                fields.append(field)
+        self.__fields = fields
     
     def __data_as_dict(self, result, idx_id=False):
         """
@@ -236,3 +228,15 @@ class sqliteDB:
             response = response + row[:-2] + "},"
         response = "[" + response[:-1] + "]"
         self.data_dict = ast.literal_eval(response)
+
+    def get_table_info(self, table):
+        """
+                Table Info from Sqlite
+                
+        :param table:
+        :return:    the sqlite definition of the Table
+        """
+        
+        return self.execute_sql(f"pragma table_info ('{table}')",
+                                data_dict=True,
+                                field_list=['cid', 'name', 'type', 'notnull', 'dlt_value', 'pk'])
