@@ -59,9 +59,7 @@ def players(sender, data):
     if not does_item_exist('crudPlayers'):
         player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
                                   x_poss=50, y_pos=50, width=1200, height=500,
-                                  table='players',
-                                  fields=[('Id', 'int'), ('Nick Name', 'str'), ('New Field', 'str')],
-                                  db=game_db)
+                                  table='players', db=game_db)
         player_crud.refresh_table()
         
     
@@ -97,9 +95,5 @@ if __name__ == '__main__':
     logfile.start()
     logfile.write(f'Opening the Database Maintenance window')
     game_db = sqliteDB()
-    
-    print(game_db.execute_sql('select * from players', data_dict=True))
-    print(game_db.get_table_info('nick_names'))
-    quit()
     
     start_ui()

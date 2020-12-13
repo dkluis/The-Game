@@ -148,4 +148,3 @@ class Board:
             result.append(v)
         self.logfile.write(f'Returning all items of the Board Dictionary: {len(result)}')
         return result
-    

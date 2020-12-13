@@ -236,7 +236,6 @@ class sqliteDB:
         :param table:
         :return:    the sqlite definition of the Table
         """
-        
         return self.execute_sql(f"pragma table_info ('{table}')",
                                 data_dict=True,
                                 field_list=['cid', 'name', 'type', 'notnull', 'dlt_value', 'pk'])
