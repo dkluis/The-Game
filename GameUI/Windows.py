@@ -135,7 +135,6 @@ class Crud_Window(Window):
         for rc in row_cell:
             set_table_selection(sender, rc[0], rc[1], False)
         
-    
     def __toggle_button_enabled__(self, button):
         config = get_item_configuration(button)
         if config['enabled']:
