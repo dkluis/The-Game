@@ -58,17 +58,19 @@ def players(sender, data):
     log_info(f'players: Sender {sender}, Data {data}')
     if not does_item_exist('crudPlayers'):
         player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
-                                  x_poss=50, y_pos=50, width=1200, height=500,
+                                  x_poss=50, y_pos=50, width=1200, height=500, button_label='Player',
                                   table='players', db=game_db)
         player_crud.refresh_table()
+    else:
+        show_item('crudPlayers')
         
     
 def nick_names(sender, data):
     log_info(f'nick names: Sender {sender}, Data {data}')
     if not does_item_exist('crudNickNames'):
         nick_names_crud = Crud_Window(name='crudNickNames', label='Maintain Nick Names', logfile=logfile,
-                                      x_poss=100, y_pos=100, width=1200, height=500,
-                                      table='nick_names', fields=[('Nick Name', 'str'), ('Id', 'int')], db=game_db)
+                                      x_poss=100, y_pos=100, width=1200, height=500, button_label='Nick Name',
+                                      table='nick_names', db=game_db)
         nick_names_crud.refresh_table()
     
     
@@ -76,8 +78,8 @@ def table_ids(sender, data):
     log_info(f'table_ids: Sender {sender}, Data {data}')
     if not does_item_exist('crudTableIds'):
         table_ids_crud = Crud_Window(name='crudTableIds', label="Maintain Table Id's", logfile=logfile,
-                                     x_poss=150, y_pos=150, width=1200, height=500,
-                                     table='table_ids', fields=[('Table Name', 'str'), ('Last Id', 'int')], db=game_db)
+                                     x_poss=150, y_pos=150, width=1200, height=500, button_label='Table Id',
+                                     table='table_ids', db=game_db)
         table_ids_crud.refresh_table()
 
     
@@ -85,8 +87,8 @@ def games(sender, data):
     log_info(f'abilities: Sender {sender}, Data {data}')
     if not does_item_exist('crudGames'):
         games_crud = Crud_Window(name='crudGames', label='Maintain Games', logfile=logfile,
-                                 x_poss=250, y_pos=250, width=1200, height=500,
-                                 table='games', fields=[('Game Id', 'int'), ('Name', 'str')], db=game_db)
+                                 x_poss=250, y_pos=250, width=1200, height=500, button_label='Game',
+                                 table='games', db=game_db)
         games_crud.refresh_table()
         
 

@@ -2,9 +2,7 @@
     Library to help generate and manage DPG Windows and Widgets
 """
 
-from dearpygui.core import *
-from Utils import logging
-from Utils import sqliteDB
+from Entities import *
 
 
 class Window:
@@ -18,7 +16,7 @@ class Window:
                  width=1000, height=750,
                  logfile=logging):
         """
-            Initialze a Window
+            Initialize a Window
             
         :param name:    DPG Name
         :param label:   Window Title
@@ -55,10 +53,14 @@ class Window:
             add_window(self.name,
                        width=self.width, height=self.height,
                        x_pos=self.x_pos, y_pos=self.y_pos,
-                       label=self.label, parent=self.parent)
+                       label=self.label, parent=self.parent,
+                       on_close=self.__on_close_window__('', ''))
             end()
         set_main_window_title(self.name)
-
+        
+    def __on_close_window__(self, sender, data):
+        delete_item(self.name)
+        
 
 class Crud_Window(Window):
     """
@@ -70,7 +72,9 @@ class Crud_Window(Window):
                  width=500, height=500,
                  x_poss=100, y_pos=100,
                  logfile=logging,
-                 table='', fields=[], db=sqliteDB):
+                 button_label='',
+                 table='', fields=[],
+                 db=sqliteDB):
         """
         Inherit the window class
         
@@ -94,6 +98,8 @@ class Crud_Window(Window):
         
         self.db = db
         self.table = table
+        self.table_button = button_label
+        self.entity = self.__get_table_object__()
         self.fields = fields
         self.field_info = list
         self.__get_field_info__()
@@ -106,18 +112,29 @@ class Crud_Window(Window):
         """
         for field in self.field_info:
             if 'text' in str(field['type']).lower():
-                add_input_text(f'input_str##{self.table}.{field["name"]}', label=f':{field["name"]} ',
+                add_input_text(f'{self.table}.{field["name"]}', label=f':{field["name"]} ',
                                width=300, parent=self.name)
             elif str(field['type']).lower() == 'integer':
-                add_input_int(f'input_int##{self.table}.{field["name"]}', label=f':{field["name"]} ',
+                add_input_int(f'{self.table}.{field["name"]}', label=f':{field["name"]} ',
                               width=200, step=0, parent=self.name)
-        add_button(name=f'Create Player##{self.name}', parent=self.name)
+        add_button(name=f'Create {self.table_button}##{self.name}', parent=self.name)
         add_same_line(parent=self.name)
-        add_button(name=f'Update Player##{self.name}', parent=self.name, enabled=False)
+        add_button(name=f'Update {self.table_button}##{self.name}', parent=self.name, enabled=False)
         add_same_line(parent=self.name)
-        add_button(name=f'Delete Player##{self.name}', parent=self.name, enabled=False)
+        add_button(name=f'Delete {self.table_button}##{self.name}', parent=self.name, enabled=False)
+        add_same_line(parent=self.name)
+        add_button(name=f'Clear##{self.name}', parent=self.name, callback=self.__reset_inputs__)
         add_separator(name=f'##{self.name}sep1', parent=self.name)
         self.__create_table__()
+        
+    def __reset_inputs__(self, sender, data):
+        self.__toggle_button_enabled__(f'Create {self.table_button}##{self.name}')
+        self.__toggle_button_enabled__(f'Update {self.table_button}##{self.name}')
+        self.__toggle_button_enabled__(f'Delete {self.table_button}##{self.name}')
+        row_cell = get_table_selections(self.table)
+        for rc in row_cell:
+            set_table_selection(sender, rc[0], rc[1], False)
+        
     
     def __toggle_button_enabled__(self, button):
         config = get_item_configuration(button)
@@ -136,7 +153,8 @@ class Crud_Window(Window):
         header = []
         for head in self.field_info:
             header.append(head['name'])
-        add_table(name=f'table##{self.name}{self.table}', headers=header, parent=self.name, width=0, height=0)
+        add_table(name=f'table##{self.name}{self.table}', headers=header, parent=self.name, width=0, height=0,
+                  callback=self.__table_click__)
     
     def refresh_table(self, sender='', data=''):
         """
@@ -158,6 +176,34 @@ class Crud_Window(Window):
             table_data.append(table_row)
         set_table_data(f'table##{self.name}{self.table}', table_data)
         
+    def __table_click__(self, sender, data):
+        row_cell = get_table_selections(sender)
+        row = row_cell[len(row_cell) - 1][0]
+        
+        if len(row_cell) > 1:
+            for rc in row_cell:
+                set_table_selection(sender, rc[0], rc[1], False)
+        
+        for cell in range(0, int(len(self.field_info))):
+            # print(f'R {row}, C {cell}')
+            # set_table_selection(sender, row, cell, True)
+            if str(self.field_info[cell]['type']).lower() == 'integer':
+                set_value(f'{self.table}.{self.field_info[cell]["name"]}', int(get_table_item(sender, row, cell)))
+                if self.field_info[cell]['name'][-3:] == '_id':
+                    self.__toggle_button_enabled__(f'Create {self.table_button}##{self.name}')
+                    self.__toggle_button_enabled__(f'Update {self.table_button}##{self.name}')
+                    self.__toggle_button_enabled__(f'Delete {self.table_button}##{self.name}')
+                    configure_item(f'{self.table}.{self.field_info[cell]["name"]}', readonly=True)
+            else:
+                set_value(f'{self.table}.{self.field_info[cell]["name"]}', get_table_item(sender, row, cell))
+        
+    def __get_table_object__(self):
+        print(f'Get Table Object {self.table}')
+        if self.table == 'players':
+            entity = Player()
+        elif self.table == 'races':
+            entity = Race
+        return entity
+
     def __get_field_info__(self):
         self.field_info = self.db.get_table_info(self.table)
-

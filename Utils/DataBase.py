@@ -1,3 +1,9 @@
+"""
+
+    Library to handle all DB operations
+
+"""
+
 import sqlite3
 import os
 import ast
@@ -170,7 +176,7 @@ class sqliteDB:
                 else:
                     self.__extract_fields__(sql)
                 self.__log.write(f'Transforming the result into a dictionary result length: {len(result)}')
-                self.__data_as_dict(result, row_id)
+                self.__data_as_dict__(result, row_id)
                 return self.data_dict
             else:
                 return result
@@ -200,7 +206,7 @@ class sqliteDB:
                 fields.append(field)
         self.__fields = fields
     
-    def __data_as_dict(self, result, idx_id=False):
+    def __data_as_dict__(self, result, idx_id=False):
         """
             Returns the data as a dictionary (with or without and index in front of every row
             

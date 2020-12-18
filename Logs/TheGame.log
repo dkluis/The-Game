@@ -691,3 +691,672 @@ Database        > Level 1 > 12/12/20 20:09:55 > Result is [(1, 'Dad', None, None
 sqliteDB        > Level 1 > 12/12/20 20:10:17 > sqliteDB: Closed the DB connection
 Database        > Level 1 > 12/12/20 20:10:17 > Database        Elapsed Time is:s 25.548 seconds
 Database        > Level 1 > 12/12/20 20:10:17 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:33:04 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:33:04 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:33:05 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:33:10 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:33:10 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:33:10 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:33:10 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:33:10 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:33:48 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:33:48 > Database        Elapsed Time is:s 43.408 seconds
+Database        > Level 1 > 12/13/20 10:33:48 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:33:49 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:33:49 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:33:49 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:33:55 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:33:55 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:33:55 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:33:55 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:33:55 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:35:00 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:35:00 > Database        Elapsed Time is:s 71.022 seconds
+Database        > Level 1 > 12/13/20 10:35:01 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:35:03 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:35:03 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:35:03 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:35:08 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:35:08 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:35:08 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:35:08 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:35:08 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:36:35 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:36:35 > Database        Elapsed Time is:s 91.852 seconds
+Database        > Level 1 > 12/13/20 10:36:35 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:36:38 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:36:38 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:36:38 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:36:44 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:36:44 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:36:44 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:36:44 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:36:44 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:37:54 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:37:54 > Database        Elapsed Time is:s 76.137 seconds
+Database        > Level 1 > 12/13/20 10:37:54 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:37:57 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:37:57 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:37:57 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:38:02 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:38:02 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:38:02 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:38:02 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:38:02 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:38:19 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:38:19 > Database        Elapsed Time is:s 22.081 seconds
+Database        > Level 1 > 12/13/20 10:38:19 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:38:35 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:38:36 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:38:36 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:38:38 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:38:38 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:38:38 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:38:38 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:38:38 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:47:15 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:47:15 > Database        Elapsed Time is:s 520.312 seconds
+Database        > Level 1 > 12/13/20 10:47:15 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:47:17 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:47:17 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:47:17 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:47:22 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:47:22 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:47:22 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:47:22 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:47:22 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 10:50:09 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 10:50:09 > Database        Elapsed Time is:s 171.331 seconds
+Database        > Level 1 > 12/13/20 10:50:09 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 10:50:11 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 10:50:11 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 10:50:11 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 10:50:15 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 10:50:15 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 10:50:15 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 10:50:15 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 10:50:15 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:07:47 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:07:47 > Database        Elapsed Time is:s 1056.42 seconds
+Database        > Level 1 > 12/13/20 11:07:47 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:07:49 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:07:49 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:07:49 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:07:53 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:07:53 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:07:53 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:07:53 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:07:53 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:12:09 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:12:09 > Database        Elapsed Time is:s 260.331 seconds
+Database        > Level 1 > 12/13/20 11:12:10 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:12:12 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:12:12 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:12:12 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:12:15 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:12:15 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:12:15 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:12:15 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:12:15 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:12:46 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:12:46 > Database        Elapsed Time is:s 33.853 seconds
+Database        > Level 1 > 12/13/20 11:12:46 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:12:47 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:12:47 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:12:47 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:12:52 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:12:52 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:12:52 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:12:52 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:12:52 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:14:59 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:14:59 > Database        Elapsed Time is:s 131.264 seconds
+Database        > Level 1 > 12/13/20 11:14:59 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:15:01 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:15:01 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:15:01 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:15:05 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:15:05 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:15:05 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:15:05 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:15:05 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:15:35 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:15:35 > Database        Elapsed Time is:s 34.683 seconds
+Database        > Level 1 > 12/13/20 11:15:35 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:15:37 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:15:37 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:15:37 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:15:42 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:15:42 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:15:42 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:15:42 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:15:42 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:16:40 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:16:40 > Database        Elapsed Time is:s 62.66 seconds
+Database        > Level 1 > 12/13/20 11:16:40 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:16:42 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:16:42 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:16:42 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:16:50 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:16:50 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:16:50 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:16:50 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:16:50 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:18:09 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:18:09 > Database        Elapsed Time is:s 87.069 seconds
+Database        > Level 1 > 12/13/20 11:18:09 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:18:11 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:18:11 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:18:11 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:18:15 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:18:15 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:18:15 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:18:15 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:18:15 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:18:28 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:18:28 > Database        Elapsed Time is:s 16.97 seconds
+Database        > Level 1 > 12/13/20 11:18:28 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:20:12 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:20:12 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:20:12 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:20:35 > sqliteDB: Tried to close the DB connection while already closed
+Database        > Level 1 > 12/13/20 11:20:35 > Database        Elapsed Time is:s 23.362 seconds
+Database        > Level 1 > 12/13/20 11:20:35 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:20:38 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:20:38 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:20:38 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:20:41 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:20:41 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:20:41 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:20:41 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:20:41 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:21:45 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:21:45 > Database        Elapsed Time is:s 67.641 seconds
+Database        > Level 1 > 12/13/20 11:21:45 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:21:49 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:21:49 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:21:49 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:21:54 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:21:54 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:21:54 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:21:54 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:21:54 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+Database        > Level 1 > 12/13/20 11:27:10 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:27:10 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:27:10 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:27:12 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:27:12 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:27:12 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:27:12 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:27:12 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:28:41 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:28:41 > Database        Elapsed Time is:s 91.231 seconds
+Database        > Level 1 > 12/13/20 11:28:41 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:28:43 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:28:43 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:28:43 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:28:48 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:28:48 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:28:48 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:28:48 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:28:48 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:31:05 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:31:05 > Database        Elapsed Time is:s 142.385 seconds
+Database        > Level 1 > 12/13/20 11:31:05 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:31:10 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:31:10 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:31:10 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:31:14 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:31:14 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:31:14 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:31:14 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:31:14 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:31:51 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:31:51 > Database        Elapsed Time is:s 41.271 seconds
+Database        > Level 1 > 12/13/20 11:31:51 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:31:58 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:31:58 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:31:58 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:32:02 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:32:03 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:32:03 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:32:03 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:32:03 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:32:46 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:32:46 > Database        Elapsed Time is:s 48.382 seconds
+Database        > Level 1 > 12/13/20 11:32:46 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:32:50 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:32:50 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:32:50 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:32:55 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:32:55 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:32:55 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:32:55 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:32:55 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:36:28 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:36:28 > Database        Elapsed Time is:s 217.987 seconds
+Database        > Level 1 > 12/13/20 11:36:28 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:36:29 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:36:29 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:36:29 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:36:34 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:36:34 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:36:34 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:36:34 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:36:34 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:37:41 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:37:41 > Database        Elapsed Time is:s 71.246 seconds
+Database        > Level 1 > 12/13/20 11:37:41 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:37:45 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:37:45 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:37:45 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:37:49 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:37:49 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:37:49 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:37:49 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:37:49 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:40:05 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:40:05 > Database        Elapsed Time is:s 139.684 seconds
+Database        > Level 1 > 12/13/20 11:40:05 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:40:07 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:40:07 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:40:07 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:40:13 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:40:13 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:40:13 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:40:13 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:40:13 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:43:51 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:43:51 > Database        Elapsed Time is:s 223.79 seconds
+Database        > Level 1 > 12/13/20 11:43:51 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:43:53 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:43:53 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:43:53 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:43:58 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:43:58 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:43:58 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:43:58 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:43:58 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:45:13 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:45:13 > Database        Elapsed Time is:s 80.504 seconds
+Database        > Level 1 > 12/13/20 11:45:13 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:45:28 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:45:28 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:45:28 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:45:32 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:45:32 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:45:32 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:45:32 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:45:32 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:46:17 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:46:17 > Database        Elapsed Time is:s 48.827 seconds
+Database        > Level 1 > 12/13/20 11:46:17 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:46:19 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:46:19 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:46:19 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:46:24 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:46:24 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:46:24 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:46:24 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:46:24 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:49:40 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:49:40 > Database        Elapsed Time is:s 200.911 seconds
+Database        > Level 1 > 12/13/20 11:49:40 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:49:42 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:49:42 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:49:42 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:49:46 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:49:46 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 11:49:46 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 11:49:46 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 11:49:46 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 11:53:55 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:53:55 > Database        Elapsed Time is:s 253.233 seconds
+Database        > Level 1 > 12/13/20 11:53:55 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 11:53:59 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 11:53:59 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 11:53:59 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 11:54:03 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 11:54:03 > sqliteDB: SQL execution of Fetch: pragma table_info ('nick_names') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 11:54:03 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 11:54:03 > sqliteDB: SQL execution of Fetch: select * from nick_names with 2 records returned
+Database        > Level 1 > 12/13/20 11:54:03 > Result is [(1, 'Daddy'), (2, 'Dad')]
+sqliteDB        > Level 1 > 12/13/20 11:54:12 > sqliteDB: SQL execution of Fetch: pragma table_info ('table_ids') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 11:54:12 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 11:54:12 > sqliteDB: SQL execution of Fetch: select * from table_ids with 3 records returned
+Database        > Level 1 > 12/13/20 11:54:12 > Result is [('games', 0), ('players', 3), ('table_ids', None)]
+sqliteDB        > Level 1 > 12/13/20 11:54:55 > sqliteDB: SQL execution of Fetch: pragma table_info ('games') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 11:54:55 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 11:54:55 > sqliteDB: SQL execution of Fetch: select * from games with 0 records returned
+Database        > Level 1 > 12/13/20 11:54:55 > Result is []
+sqliteDB        > Level 1 > 12/13/20 11:55:15 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 11:55:15 > Database        Elapsed Time is:s 76.892 seconds
+Database        > Level 1 > 12/13/20 11:55:15 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:15:19 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:15:19 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:15:19 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:16:37 > sqliteDB: Tried to close the DB connection while already closed
+Database        > Level 1 > 12/13/20 14:16:37 > Database        Elapsed Time is:s 77.851 seconds
+Database        > Level 1 > 12/13/20 14:16:37 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:16:41 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:16:41 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:16:41 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:16:46 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:16:46 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:16:46 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:16:46 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:16:46 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:16:50 > sqliteDB: SQL execution of Fetch: pragma table_info ('nick_names') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 14:16:50 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 14:16:50 > sqliteDB: SQL execution of Fetch: select * from nick_names with 2 records returned
+Database        > Level 1 > 12/13/20 14:16:50 > Result is [(1, 'Daddy'), (2, 'Dad')]
+sqliteDB        > Level 1 > 12/13/20 14:16:55 > sqliteDB: SQL execution of Fetch: pragma table_info ('table_ids') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 14:16:55 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 14:16:55 > sqliteDB: SQL execution of Fetch: select * from table_ids with 3 records returned
+Database        > Level 1 > 12/13/20 14:16:55 > Result is [('games', 0), ('players', 3), ('table_ids', None)]
+sqliteDB        > Level 1 > 12/13/20 14:17:04 > sqliteDB: SQL execution of Fetch: pragma table_info ('games') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 14:17:04 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 14:17:05 > sqliteDB: SQL execution of Fetch: select * from games with 0 records returned
+Database        > Level 1 > 12/13/20 14:17:05 > Result is []
+sqliteDB        > Level 1 > 12/13/20 14:18:49 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:18:49 > Database        Elapsed Time is:s 128.392 seconds
+Database        > Level 1 > 12/13/20 14:18:49 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:23:18 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:23:18 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:23:18 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:23:21 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:23:21 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:23:21 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:23:21 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:23:21 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:24:51 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:24:51 > Database        Elapsed Time is:s 93.18 seconds
+Database        > Level 1 > 12/13/20 14:24:51 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:24:53 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:24:53 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:24:53 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:24:57 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:24:57 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:24:57 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:24:57 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:24:57 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:25:28 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:25:28 > Database        Elapsed Time is:s 34.716 seconds
+Database        > Level 1 > 12/13/20 14:25:28 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:25:39 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:25:39 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:25:39 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:25:44 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:25:44 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:25:44 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:25:44 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:25:44 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:25:53 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:25:53 > Database        Elapsed Time is:s 14.195 seconds
+Database        > Level 1 > 12/13/20 14:25:53 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:27:35 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:27:35 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:27:35 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:27:37 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:27:37 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:27:37 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:28:07 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:28:07 > Database        Elapsed Time is:s 31.733 seconds
+Database        > Level 1 > 12/13/20 14:28:07 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:28:09 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:28:09 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:28:09 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:28:12 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:28:12 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:28:12 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:28:12 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:28:12 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:29:33 > sqliteDB: SQL execution of Fetch: pragma table_info ('nick_names') with 2 records returned
+sqliteDB        > Level 1 > 12/13/20 14:29:33 > Transforming the result into a dictionary result length: 2
+sqliteDB        > Level 1 > 12/13/20 14:29:33 > sqliteDB: SQL execution of Fetch: select * from nick_names with 2 records returned
+Database        > Level 1 > 12/13/20 14:29:33 > Result is [(1, 'Daddy'), (2, 'Dad')]
+sqliteDB        > Level 1 > 12/13/20 14:31:05 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:31:05 > Database        Elapsed Time is:s 175.942 seconds
+Database        > Level 1 > 12/13/20 14:31:05 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:31:08 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:31:08 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:31:08 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:31:11 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:31:11 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:31:11 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:31:11 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:31:11 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:33:10 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:33:10 > Database        Elapsed Time is:s 121.979 seconds
+Database        > Level 1 > 12/13/20 14:33:10 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:33:11 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:33:11 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:33:11 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:33:16 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:33:16 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:33:16 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:33:16 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:33:16 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:33:29 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:33:29 > Database        Elapsed Time is:s 17.969 seconds
+Database        > Level 1 > 12/13/20 14:33:29 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:33:32 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:33:32 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:33:32 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:33:37 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:33:37 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:33:37 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:33:37 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:33:37 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 14:34:06 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 14:34:06 > Database        Elapsed Time is:s 33.174 seconds
+Database        > Level 1 > 12/13/20 14:34:06 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/13/20 14:34:07 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/13/20 14:34:07 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/13/20 14:34:07 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/13/20 14:34:11 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/13/20 14:34:11 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/13/20 14:34:11 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/13/20 14:34:11 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/13/20 14:34:11 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/13/20 17:37:01 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/13/20 17:37:01 > Database        Elapsed Time is:s 10973.12 seconds
+Database        > Level 1 > 12/13/20 17:37:01 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:09:51 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:09:51 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:09:51 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:09:54 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:09:54 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:09:54 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:09:54 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:09:54 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:10:54 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:10:54 > Database        Elapsed Time is:s 62.892 seconds
+Database        > Level 1 > 12/14/20 07:10:54 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:10:57 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:10:57 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:10:57 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:10:59 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:10:59 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:10:59 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:10:59 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:10:59 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:14:35 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:14:35 > Database        Elapsed Time is:s 218.053 seconds
+Database        > Level 1 > 12/14/20 07:14:35 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:14:37 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:14:37 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:14:37 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:14:42 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:14:42 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:14:42 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:14:42 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:14:42 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:15:29 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:15:29 > Database        Elapsed Time is:s 51.332 seconds
+Database        > Level 1 > 12/14/20 07:15:29 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:15:31 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:15:31 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:15:31 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:15:37 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:15:37 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:15:37 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:15:37 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:15:37 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:16:37 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:16:37 > Database        Elapsed Time is:s 65.725 seconds
+Database        > Level 1 > 12/14/20 07:16:37 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:16:39 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:16:39 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:16:39 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:16:42 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:16:42 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:16:42 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:16:42 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:16:42 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:18:02 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:18:02 > Database        Elapsed Time is:s 82.901 seconds
+Database        > Level 1 > 12/14/20 07:18:02 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:18:04 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:18:04 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:18:04 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:18:09 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:18:09 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:18:09 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:18:09 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:18:09 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:18:31 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:18:31 > Database        Elapsed Time is:s 26.372 seconds
+Database        > Level 1 > 12/14/20 07:18:31 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:18:33 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:18:33 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:18:33 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:18:37 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:18:37 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:18:37 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:18:37 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:18:37 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:19:29 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:19:29 > Database        Elapsed Time is:s 56.733 seconds
+Database        > Level 1 > 12/14/20 07:19:29 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:19:32 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:19:32 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:19:32 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:19:38 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:19:38 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:19:38 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:19:38 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:19:38 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:21:26 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:21:26 > Database        Elapsed Time is:s 113.95 seconds
+Database        > Level 1 > 12/14/20 07:21:26 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:21:29 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:21:29 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:21:29 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:21:32 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:21:32 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:21:32 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:21:32 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:21:32 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:21:39 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:21:39 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:22:11 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:22:11 > Database        Elapsed Time is:s 41.75 seconds
+Database        > Level 1 > 12/14/20 07:22:11 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:22:13 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:22:13 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:22:13 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:22:18 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:22:18 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:22:18 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:22:18 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:22:18 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:24:24 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:24:24 > Database        Elapsed Time is:s 130.634 seconds
+Database        > Level 1 > 12/14/20 07:24:24 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:24:26 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:24:26 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:24:26 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:24:31 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:24:31 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:24:31 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:24:31 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:24:31 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:25:29 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:25:29 > Database        Elapsed Time is:s 63.215 seconds
+Database        > Level 1 > 12/14/20 07:25:29 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:25:31 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:25:31 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:25:31 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:25:36 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:25:36 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:25:36 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:25:36 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:25:36 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:30:22 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:30:22 > Database        Elapsed Time is:s 290.906 seconds
+Database        > Level 1 > 12/14/20 07:30:22 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:30:25 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:30:25 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:30:25 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:30:32 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:30:32 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:30:32 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:30:32 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:30:32 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:40:12 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:40:12 > Database        Elapsed Time is:s 587.305 seconds
+Database        > Level 1 > 12/14/20 07:40:12 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:40:15 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:40:15 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:40:15 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:40:20 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:40:20 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:40:20 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:40:53 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:40:53 > Database        Elapsed Time is:s 37.711 seconds
+Database        > Level 1 > 12/14/20 07:40:53 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/14/20 07:40:55 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/14/20 07:40:55 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/14/20 07:40:55 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/14/20 07:40:59 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/14/20 07:40:59 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/14/20 07:40:59 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/14/20 07:40:59 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/14/20 07:40:59 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/14/20 07:42:14 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/14/20 07:42:14 > Database        Elapsed Time is:s 78.312 seconds
+Database        > Level 1 > 12/14/20 07:42:14 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/15/20 10:07:35 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/15/20 10:07:35 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/15/20 10:07:35 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/15/20 10:07:39 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/15/20 10:07:39 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/15/20 10:07:39 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/15/20 10:07:39 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/15/20 10:07:39 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/15/20 10:07:44 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/15/20 10:07:44 > Database        Elapsed Time is:s 8.874 seconds
+Database        > Level 1 > 12/15/20 10:07:44 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/17/20 18:39:11 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/17/20 18:39:11 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/17/20 18:39:11 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/17/20 18:42:14 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/17/20 18:42:14 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 4 records returned
+sqliteDB        > Level 1 > 12/17/20 18:42:14 > Transforming the result into a dictionary result length: 4
+sqliteDB        > Level 1 > 12/17/20 18:42:14 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/17/20 18:42:14 > Result is [(1, 'Dad', None, None), (2, 'Robin', None, None), (3, 'Opa', None, None)]
+sqliteDB        > Level 1 > 12/17/20 18:44:40 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/17/20 18:44:40 > Database        Elapsed Time is:s 328.8 seconds
+Database        > Level 1 > 12/17/20 18:44:40 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Database        > Level 1 > 12/17/20 18:44:43 > >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Database        > Level 1 > 12/17/20 18:44:43 > Opening the Database Maintenance window
+sqliteDB        > Level 1 > 12/17/20 18:44:43 > sqliteDB: Initialized the DB /Volumes/HD-Data-CA-Server/Development/PycharmProjects/The Game/Data/TheGame.db
+sqliteDB        > Level 1 > 12/17/20 18:44:46 > sqliteDB: Opened the DB connection
+sqliteDB        > Level 1 > 12/17/20 18:44:46 > sqliteDB: SQL execution of Fetch: pragma table_info ('players') with 5 records returned
+sqliteDB        > Level 1 > 12/17/20 18:44:46 > Transforming the result into a dictionary result length: 5
+sqliteDB        > Level 1 > 12/17/20 18:44:46 > sqliteDB: SQL execution of Fetch: select * from players with 3 records returned
+Database        > Level 1 > 12/17/20 18:44:46 > Result is [(1, 'Dad', None, None, None), (2, 'Robin', None, None, None), (3, 'Opa', None, None, None)]
+sqliteDB        > Level 1 > 12/17/20 18:52:36 > sqliteDB: Closed the DB connection
+Database        > Level 1 > 12/17/20 18:52:37 > Database        Elapsed Time is:s 473.966 seconds
+Database        > Level 1 > 12/17/20 18:52:37 > <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<

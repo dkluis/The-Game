@@ -1,6 +1,10 @@
-import os
+"""
+
+    Library to handle standard functions
+
+"""
+
 import time
-import ast
 from timeit import default_timer as timer
 
 
