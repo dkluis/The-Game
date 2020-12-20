@@ -6,6 +6,7 @@
 
 
 from Utils import *
+import ast
 
 
 class Player:
@@ -88,4 +89,3 @@ def store_all_players(players):
         store_players = str(info) + '\n'
         players_file.write(store_players)
     players_file.close()
-

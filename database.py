@@ -58,7 +58,7 @@ def players(sender, data):
     log_info(f'players: Sender {sender}, Data {data}')
     if not does_item_exist('crudPlayers'):
         player_crud = Crud_Window(name='crudPlayers', label='Maintain Players', logfile=logfile,
-                                  x_poss=50, y_pos=50, width=1200, height=500, button_label='Player',
+                                  x_pos=50, y_pos=50, width=1200, height=500, button_label='Player',
                                   table='players', db=game_db)
         player_crud.refresh_table()
     else:

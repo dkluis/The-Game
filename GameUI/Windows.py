@@ -2,6 +2,8 @@
     Library to help generate and manage DPG Windows and Widgets
 """
 
+from screeninfo import get_monitors
+from dearpygui.simple import *
 from Entities import *
 
 
@@ -12,7 +14,7 @@ class Window:
     """
     
     def __init__(self, name='', label='', parent='',
-                 x_poss=100, y_pos=100,
+                 x_pos=100, y_pos=100,
                  width=1000, height=750,
                  logfile=logging):
         """
@@ -21,7 +23,7 @@ class Window:
         :param name:    DPG Name
         :param label:   Window Title
         :param parent:  DPG Parent container
-        :param x_poss:  Vertical top left position
+        :param x_pos:  Vertical top left position
         :param y_pos:   Horizontal top right position
         :param width:   Window width
         :param height:  Window height
@@ -30,7 +32,7 @@ class Window:
         self.log = logfile
         self.name = name
         self.label = label
-        self.x_pos = x_poss
+        self.x_pos = x_pos
         self.y_pos = y_pos
         self.width = width
         self.height = height
@@ -48,19 +50,74 @@ class Window:
                        width=self.width, height=self.height,
                        x_pos=self.x_pos, y_pos=self.y_pos,
                        label=self.label)
+            add_menu_bar(f'##MB{self.name}', show=False)
             end()
         else:
             add_window(self.name,
                        width=self.width, height=self.height,
                        x_pos=self.x_pos, y_pos=self.y_pos,
-                       label=self.label, parent=self.parent,
-                       on_close=self.__on_close_window__('', ''))
+                       label=self.label, parent=self.parent)
+            add_menu_bar(f'##MB{self.name}', show=False)
             end()
+        set_theme('Gold')
+            
+    def show(self):
+        if does_item_exist(self.name):
+            show_item(self.name)
+        else:
+            self.__create_window__()
+    
+    
+class Main_Window(Window):
+    def __init__(self, name, label,
+                 width=500, height=500,
+                 x_pos=100, y_pos=100, center=False,
+                 logfile=logging,
+                 primary=False,
+                 include_main_menu=False):
+        super().__init__(name=name, label=label,
+                         x_pos=x_pos, y_pos=y_pos,
+                         width=width, height=height,
+                         logfile=logfile)
+        self.primary = primary
+        self.include_menu = include_main_menu
+        if center:
+            self.__center__()
+        
+    def start(self):
+        # set_exit_callback(callback=self.stop_functions)
+        set_log_level(mvINFO)
+        set_main_window_size(width=self.width, height=self.height)
+        set_main_window_pos(x=self.x_pos, y=self.y_pos)
         set_main_window_title(self.name)
         
-    def __on_close_window__(self, sender, data):
-        delete_item(self.name)
+        if self.include_menu:
+            with menu(name='Developer', parent=f'##MB{self.name}'):
+                add_menu_item('DPG Debugger', callback=show_debug)
+                add_menu_item(name='DPG Logger', callback=show_logger)
+                add_menu_item(name='DPG Doc', callback=show_documentation)
+            with menu(name='File', parent=f'##MB{self.name}', before='Developer'):
+                add_menu_item(name='Quit', shortcut='ctl Q', callback=self.stop)
+            show_item(f'##MB{self.name}')
+        end()
+        end()
         
+        if self.primary:
+            start_dearpygui(primary_window=self.name)
+        else:
+            start_dearpygui()
+            
+    def stop(self, sender, data):
+        stop_dearpygui()
+        
+    def stop_functions(self):
+        pass
+    
+    def __center__(self):
+        monitors = get_monitors()
+        self.x_pos = int((monitors[0].width - self.width) / 2)
+        self.y_pos = int((monitors[0].height - self.height) / 2)
+    
 
 class Crud_Window(Window):
     """
@@ -70,7 +127,7 @@ class Crud_Window(Window):
     
     def __init__(self, name, label,
                  width=500, height=500,
-                 x_poss=100, y_pos=100,
+                 x_pos=100, y_pos=100,
                  logfile=logging,
                  button_label='',
                  table='', fields=[],
@@ -80,7 +137,7 @@ class Crud_Window(Window):
         
         :param name:    DPG Name
         :param label:   Window Title
-        :param x_poss:  Vertical top left position
+        :param x_pos:  Vertical top left position
         :param y_pos:   Horizontal top right position
         :param width:   Window width
         :param height:  Window height
@@ -92,7 +149,7 @@ class Crud_Window(Window):
         """
         
         super().__init__(name=name, label=label,
-                         x_poss=x_poss, y_pos=y_pos,
+                         x_pos=x_pos, y_pos=y_pos,
                          width=width, height=height,
                          logfile=logfile)
         
@@ -200,9 +257,10 @@ class Crud_Window(Window):
         print(f'Get Table Object {self.table}')
         if self.table == 'players':
             entity = Player()
-        elif self.table == 'races':
-            entity = Race
+        elif self.table == 'table_ids':
+            entity = ()
         return entity
 
     def __get_field_info__(self):
         self.field_info = self.db.get_table_info(self.table)
+
