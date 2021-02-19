@@ -2,8 +2,9 @@
     Library to help generate and manage DPG Windows and Widgets
 """
 
-from screeninfo import get_monitors
 from dearpygui.simple import *
+from screeninfo import get_monitors
+
 from Entities import *
 
 
@@ -46,28 +47,28 @@ class Window:
         :return:
         """
         if self.parent == '':
-            add_window(self.name,
-                       width=self.width, height=self.height,
-                       x_pos=self.x_pos, y_pos=self.y_pos,
-                       label=self.label)
-            add_menu_bar(f'##MB{self.name}', show=False)
-            end()
+            with window(self.name,
+                        width=self.width, height=self.height,
+                        x_pos=self.x_pos, y_pos=self.y_pos,
+                        label=self.label):
+                with menu_bar(f'##MB{self.name}', show=False):
+                    pass
         else:
-            add_window(self.name,
-                       width=self.width, height=self.height,
-                       x_pos=self.x_pos, y_pos=self.y_pos,
-                       label=self.label, parent=self.parent)
-            add_menu_bar(f'##MB{self.name}', show=False)
-            end()
+            with window(self.name,
+                        width=self.width, height=self.height,
+                        x_pos=self.x_pos, y_pos=self.y_pos,
+                        label=self.label, parent=self.parent):
+                with menu_bar(f'##MB{self.name}', show=False):
+                    pass
         set_theme('Gold')
-            
+    
     def show(self):
         if does_item_exist(self.name):
             show_item(self.name)
         else:
             self.__create_window__()
-    
-    
+
+
 class Main_Window(Window):
     def __init__(self, name, label,
                  width=500, height=500,
@@ -75,6 +76,21 @@ class Main_Window(Window):
                  logfile=logging,
                  primary=False,
                  include_main_menu=False):
+        """
+        
+            Make the main window and inherit the Window class
+        
+        :param name:
+        :param label:
+        :param width:
+        :param height:
+        :param x_pos:
+        :param y_pos:
+        :param center:
+        :param logfile:
+        :param primary:
+        :param include_main_menu:
+        """
         super().__init__(name=name, label=label,
                          x_pos=x_pos, y_pos=y_pos,
                          width=width, height=height,
@@ -83,8 +99,15 @@ class Main_Window(Window):
         self.include_menu = include_main_menu
         if center:
             self.__center__()
-        
+    
     def start(self):
+        """
+            
+            Start DPG
+            
+        :return:
+        """
+        # ToDo figure out catching the kill of the main window and gracefully shutdown the app
         # set_exit_callback(callback=self.stop_functions)
         set_log_level(mvINFO)
         set_main_window_size(width=self.width, height=self.height)
@@ -99,25 +122,37 @@ class Main_Window(Window):
             with menu(name='File', parent=f'##MB{self.name}', before='Developer'):
                 add_menu_item(name='Quit', shortcut='ctl Q', callback=self.stop)
             show_item(f'##MB{self.name}')
-        end()
-        end()
         
         if self.primary:
             start_dearpygui(primary_window=self.name)
         else:
             start_dearpygui()
-            
+    
     def stop(self, sender, data):
-        stop_dearpygui()
+        """
         
+            Stop DPG
+        
+        :param sender:
+        :param data:
+        :return:
+        """
+        stop_dearpygui()
+    
     def stop_functions(self):
+        """
+        
+            Gracefully shutdown the App
+        
+        :return:
+        """
         pass
     
     def __center__(self):
         monitors = get_monitors()
         self.x_pos = int((monitors[0].width - self.width) / 2)
         self.y_pos = int((monitors[0].height - self.height) / 2)
-    
+
 
 class Crud_Window(Window):
     """
@@ -131,21 +166,24 @@ class Crud_Window(Window):
                  logfile=logging,
                  button_label='',
                  table='', fields=[],
-                 db=sqliteDB):
+                 db=sqliteDB,
+                 add_to_menu=False, menu_name=''):
         """
         Inherit the window class
         
         :param name:    DPG Name
         :param label:   Window Title
-        :param x_pos:  Vertical top left position
+        :param x_pos:   Vertical top left position
         :param y_pos:   Horizontal top right position
         :param width:   Window width
         :param height:  Window height
         :param logfile: The Game Logfile
         
-        :param table:   The table to be maintained
-        :param fields:  The fields to use
-        :param db:      The sqliteDB object
+        :param table:       The table to be maintained
+        :param fields:      The fields to use
+        :param db:          The sqliteDB object
+        :param add_to_menu  Add to the main menu
+        :param menu_name    Menu to add it to
         """
         
         super().__init__(name=name, label=label,
@@ -159,8 +197,17 @@ class Crud_Window(Window):
         self.entity = self.__get_table_object__()
         self.fields = fields
         self.field_info = list
+        if add_to_menu:
+            self.__add_to_menu__(menu_name)
         self.__get_field_info__()
         self.__maintain_records__()
+    
+    def __add_to_menu__(self, menu_name):
+        if not does_item_exist('tables'):
+            with menu(name='tables', label='Maintain Tables', parent=f'##MB{menu_name}'):
+                add_menu_item(name=f'{self.table_button}s##tables')
+        else:
+            add_menu_item(name=f'{self.table_button}s##tables', parent=f'##MB{menu_name}')
     
     def __maintain_records__(self):
         """
@@ -183,7 +230,7 @@ class Crud_Window(Window):
         add_button(name=f'Clear##{self.name}', parent=self.name, callback=self.__reset_inputs__)
         add_separator(name=f'##{self.name}sep1', parent=self.name)
         self.__create_table__()
-        
+    
     def __reset_inputs__(self, sender, data):
         self.__toggle_button_enabled__(f'Create {self.table_button}##{self.name}')
         self.__toggle_button_enabled__(f'Update {self.table_button}##{self.name}')
@@ -191,7 +238,7 @@ class Crud_Window(Window):
         row_cell = get_table_selections(self.table)
         for rc in row_cell:
             set_table_selection(sender, rc[0], rc[1], False)
-        
+    
     def __toggle_button_enabled__(self, button):
         config = get_item_configuration(button)
         if config['enabled']:
@@ -231,7 +278,7 @@ class Crud_Window(Window):
                 table_row.append(field)
             table_data.append(table_row)
         set_table_data(f'table##{self.name}{self.table}', table_data)
-        
+    
     def __table_click__(self, sender, data):
         row_cell = get_table_selections(sender)
         row = row_cell[len(row_cell) - 1][0]
@@ -252,7 +299,7 @@ class Crud_Window(Window):
                     configure_item(f'{self.table}.{self.field_info[cell]["name"]}', readonly=True)
             else:
                 set_value(f'{self.table}.{self.field_info[cell]["name"]}', get_table_item(sender, row, cell))
-        
+    
     def __get_table_object__(self):
         print(f'Get Table Object {self.table}')
         if self.table == 'players':
@@ -260,7 +307,6 @@ class Crud_Window(Window):
         elif self.table == 'table_ids':
             entity = ()
         return entity
-
+    
     def __get_field_info__(self):
         self.field_info = self.db.get_table_info(self.table)
-
